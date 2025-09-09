@@ -21,3 +21,5 @@ This project provisions a basic AWS infrastructure using Terraform, including ne
 3. Initialize Terraform:  
    ```bash
    terraform init
+   terraform plan
+   terraform apply
