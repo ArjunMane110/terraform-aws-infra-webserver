@@ -158,7 +158,7 @@ resource "aws_eip_association" "webserver_eip_assoc" {
   allocation_id = aws_eip.webserver_eip.id
 }
 
-# 11 Budget
+# 11 Budget Alert
 resource "aws_budgets_budget" "like-and-subscribe" {
   name              = "monthly-budget"
   budget_type       = "COST"
@@ -167,3 +167,4 @@ resource "aws_budgets_budget" "like-and-subscribe" {
   time_unit         = "MONTHLY"
   time_period_start = "2025-09-13_00:01"
 }
+
