@@ -163,8 +163,9 @@ resource "aws_budgets_budget" "like-and-subscribe" {
   name              = "monthly-budget"
   budget_type       = "COST"
   limit_amount      = "500.0"
-  limit_unit        = "USD" #INR for indian rupees
+  limit_unit        = "USD"
   time_unit         = "MONTHLY"
   time_period_start = "2025-09-13_00:01"
 }
+
 
