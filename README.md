@@ -3,6 +3,9 @@
 ## Description
 This project provisions a basic AWS infrastructure using Terraform, including networking components and an EC2 instance. The EC2 instance runs Apache to serve a simple web page for demonstration.
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a7e8b065-fc2c-42e2-8045-cd35c67e4250" />
+
+
 ## Resources Created
 1. **VPC** – Custom virtual private cloud (`10.0.0.0/16`)  
 2. **Internet Gateway** – For outbound/inbound internet access  
