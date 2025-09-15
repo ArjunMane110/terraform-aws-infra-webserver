@@ -26,3 +26,42 @@ This project provisions a basic AWS infrastructure using Terraform, including ne
    terraform init
    terraform plan
    terraform apply
+
+
+
+                    ┌──────────────────────────────┐
+                    │        AWS Account           │
+                    │    (us-east-1 region)        │
+                    └─────────────┬────────────────┘
+                                  │
+                       ┌──────────▼───────────┐
+                       │       VPC 10.0.0.0/16 │
+                       └──────────┬───────────┘
+                                  │
+                    ┌─────────────▼─────────────┐
+                    │ Subnet 10.0.1.0/24        │
+                    │ AZ: us-east-1a            │
+                    └─────────────┬─────────────┘
+                                  │
+                      ┌───────────▼────────────┐
+                      │    EC2 Instance        │
+                      │ (t3.micro, Apache2)    │
+                      │ Private IP: 10.0.1.25  │
+                      └───────────┬────────────┘
+                                  │
+                    ┌─────────────▼─────────────┐
+                    │ Elastic IP (Public)       │
+                    │ Accessible via Internet   │
+                    └─────────────┬─────────────┘
+                                  │
+         ┌────────────────────────▼────────────────────────┐
+         │                Security Group                   │
+         │  Allow: SSH (22), HTTP (80), HTTPS (443)        │
+         └────────────────────────────────────────────────┘
+                                  │
+                    ┌─────────────▼─────────────┐
+                    │ Internet Gateway           │
+                    │ (with Route Table)         │
+                    └───────────────────────────┘
+
+Budget: AWS Budgets → 500 USD monthly alert
