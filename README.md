@@ -65,3 +65,8 @@ This project provisions a basic AWS infrastructure using Terraform, including ne
                     └───────────────────────────┘
 
 Budget: AWS Budgets → 500 USD monthly alert
+
+
+Upcoming changes
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/09c8c6c1-f204-40b2-82b0-330afed124b5" />
